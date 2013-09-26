@@ -1,0 +1,45 @@
+#N canvas 366 70 1009 703 12;
+#X obj 341 208 bng 25 250 50 0 empty empty play 30 10 0 8 -258699 -241291
+-1;
+#X obj 371 231 bng 25 250 50 0 empty empty load 30 10 0 8 -258699 -241291
+-1;
+#X symbolatom 268 651 50 0 0 0 - - -;
+#X obj 254 291 sampleplayer 1;
+#X msg 368 265 samples/BD01.WAV;
+#X obj 254 319 outlet~;
+#X obj 218 126 r sampleinit;
+#X floatatom 180 247 5 0 0 0 - - -;
+#X text 175 229 length;
+#X floatatom 181 270 5 0 0 0 - - -;
+#X text 174 288 volume;
+#X floatatom 228 247 5 0 0 0 - - -;
+#X floatatom 277 247 5 0 0 0 - - -;
+#X text 277 227 pitch;
+#X text 229 228 start;
+#X obj 361 319 s lastload;
+#X obj 268 621 r lastload;
+#X msg 218 199 1;
+#X msg 180 199 440;
+#X msg 255 199 100;
+#X text 438 600 pitch is based at 100 as natural playback speed;
+#X text 438 617 load samples with bang and copy path into loader message
+;
+#X obj 351 121 inlet;
+#X connect 0 0 3 4;
+#X connect 1 0 3 5;
+#X connect 3 0 5 0;
+#X connect 3 1 15 0;
+#X connect 4 0 3 6;
+#X connect 6 0 4 0;
+#X connect 6 0 18 0;
+#X connect 6 0 17 0;
+#X connect 6 0 19 0;
+#X connect 7 0 3 1;
+#X connect 9 0 3 0;
+#X connect 11 0 3 2;
+#X connect 12 0 3 3;
+#X connect 16 0 2 0;
+#X connect 17 0 11 0;
+#X connect 18 0 7 0;
+#X connect 19 0 12 0;
+#X connect 22 0 0 0;

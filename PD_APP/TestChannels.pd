@@ -1,0 +1,42 @@
+#N canvas 410 134 588 513 12;
+#X obj 108 109 osc~ 440;
+#X text 187 111 <-- 440 Hz. sine wave at full blast;
+#X obj 108 138 *~ 0.05;
+#X text 202 3 MAKING A SINE WAVE;
+#X text 43 395 Audio computation can be turned on and off by sending
+messages to the global "pd" object as follows:;
+#X msg 109 439 \; pd dsp 1;
+#X msg 213 439 \; pd dsp 0;
+#X text 124 476 ON;
+#X text 233 476 OFF;
+#X text 40 497 You should see the Pd window change to reflect whether
+audio is on or off. You can also turn audio on and off using the "audio"
+menu \, but the buttons are provided as a shortcut.;
+#X text 41 568 When DSP is on \, you should hear a tone whose pitch
+is A 440 and whose amplitude is 0.05. If instead you are greeted with
+silence \, you might want to read the HTML documentation on setting
+up audio.;
+#X text 39 634 In general when you start a work session with Pd \,
+you will want to choose "test audio and MIDI" from the help window
+\, which opens a more comprehensive test patch than this one.;
+#X text 307 447 <-- click these;
+#X text 187 139 <-- reduce amplitude to 0.05;
+#X text 283 218 <----- send to the audio output device;
+#X text 32 23 Audio computation in Pd is done using "tilde objects"
+such as the three below. They use continuous audio streams to intercommunicate
+\, as well as communicating with other ("control") Pd objects using
+messages.;
+#X text 353 690 updated for Pd version 0.36;
+#X obj 88 228 dac~ 3 4 5 6 7 8 9 10;
+#X text 134 313 Soundflower -> lanci soundflowerbed \, gli dai 16 canali
+\, gli dai comme output MOTU e in audio setup metti soundflower però
+devi lanciare anche Jack!!;
+#X connect 0 0 2 0;
+#X connect 2 0 17 0;
+#X connect 2 0 17 1;
+#X connect 2 0 17 6;
+#X connect 2 0 17 7;
+#X connect 2 0 17 2;
+#X connect 2 0 17 3;
+#X connect 2 0 17 4;
+#X connect 2 0 17 5;

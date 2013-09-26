@@ -1,0 +1,156 @@
+#N canvas 29 62 1009 703 12;
+#X symbolatom 268 651 50 0 0 0 - - -;
+#X obj 268 621 r lastload;
+#X msg 913 164 samples/SHAKE1.WAV;
+#X text 438 600 pitch is based at 100 as natural playback speed;
+#X text 438 617 load samples with bang and copy path into loader message
+;
+#X obj 409 105 bng 25 250 50 0 empty empty play 30 10 0 8 -258699 -241291
+-1;
+#X obj 445 135 bng 25 250 50 0 empty empty load 30 10 0 8 -258699 -241291
+-1;
+#X obj 418 232 outlet~;
+#X floatatom 374 140 5 0 0 0 - - -;
+#X text 367 158 volume;
+#X obj 525 232 s lastload;
+#X obj 409 82 inlet;
+#X obj 556 126 loadbang;
+#X obj 465 76 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 500 118 bang;
+#X obj 465 39 r loopOne;
+#X obj 500 82 r stopOne;
+#X obj 418 204 smplplayer 3;
+#X obj 68 94 bng 25 250 50 0 empty empty play 30 10 0 8 -258699 -241291
+-1;
+#X obj 104 124 bng 25 250 50 0 empty empty load 30 10 0 8 -258699 -241291
+-1;
+#X obj 77 221 outlet~;
+#X floatatom 33 129 5 0 0 0 - - -;
+#X text 26 147 volume;
+#X obj 184 221 s lastload;
+#X obj 68 71 inlet;
+#X obj 215 115 loadbang;
+#X obj 124 65 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 159 107 bang;
+#X obj 124 28 r loopOne;
+#X obj 159 71 r stopOne;
+#X obj 77 193 smplplayer 1;
+#X obj 112 344 bng 25 250 50 0 empty empty play 30 10 0 8 -258699 -241291
+-1;
+#X obj 148 374 bng 25 250 50 0 empty empty load 30 10 0 8 -258699 -241291
+-1;
+#X obj 121 471 outlet~;
+#X floatatom 77 379 5 0 0 0 - - -;
+#X text 70 397 volume;
+#X obj 228 471 s lastload;
+#X obj 112 321 inlet;
+#X obj 259 365 loadbang;
+#X obj 168 315 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 203 357 bang;
+#X obj 168 278 r loopOne;
+#X obj 203 321 r stopOne;
+#X obj 121 443 smplplayer 2;
+#X obj 539 366 bng 25 250 50 0 empty empty play 30 10 0 8 -258699 -241291
+-1;
+#X obj 575 396 bng 25 250 50 0 empty empty load 30 10 0 8 -258699 -241291
+-1;
+#X obj 548 493 outlet~;
+#X floatatom 504 401 5 0 0 0 - - -;
+#X text 497 419 volume;
+#X obj 655 493 s lastload;
+#X obj 539 343 inlet;
+#X obj 686 387 loadbang;
+#X obj 595 337 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 630 379 bang;
+#X obj 595 300 r loopOne;
+#X obj 630 343 r stopOne;
+#X obj 548 465 smplplayer 4;
+#X obj 766 98 bng 25 250 50 0 empty empty play 30 10 0 8 -258699 -241291
+-1;
+#X obj 802 128 bng 25 250 50 0 empty empty load 30 10 0 8 -258699 -241291
+-1;
+#X obj 775 225 outlet~;
+#X floatatom 731 133 5 0 0 0 - - -;
+#X text 724 151 volume;
+#X obj 882 225 s lastload;
+#X obj 766 75 inlet;
+#X obj 822 69 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 857 111 bang;
+#X obj 822 32 r loopOne;
+#X obj 857 75 r stopOne;
+#X obj 914 124 loadbang;
+#X obj 775 197 smplplayer 5;
+#X msg 214 160 samples/_1.jetplane.aif;
+#X msg 258 411 samples/_2.race.aif;
+#X msg 556 170 samples/_3.splash.aif;
+#X msg 686 426 samples/_4.helicopter.aif;
+#X obj 128 543 r stopOne;
+#X obj 127 586 select 1 2 3 4;
+#X text 121 624 e qui lo colleghi ai vari pezzi...;
+#X connect 1 0 0 0;
+#X connect 2 0 69 5;
+#X connect 5 0 17 1;
+#X connect 6 0 17 2;
+#X connect 8 0 17 0;
+#X connect 11 0 5 0;
+#X connect 12 0 72 0;
+#X connect 13 0 17 3;
+#X connect 14 0 17 4;
+#X connect 15 0 13 0;
+#X connect 16 0 14 0;
+#X connect 17 0 7 0;
+#X connect 17 1 10 0;
+#X connect 18 0 30 1;
+#X connect 19 0 30 2;
+#X connect 21 0 30 0;
+#X connect 24 0 18 0;
+#X connect 25 0 70 0;
+#X connect 26 0 30 3;
+#X connect 27 0 30 4;
+#X connect 28 0 26 0;
+#X connect 29 0 27 0;
+#X connect 30 0 20 0;
+#X connect 30 1 23 0;
+#X connect 31 0 43 1;
+#X connect 32 0 43 2;
+#X connect 34 0 43 0;
+#X connect 37 0 31 0;
+#X connect 38 0 71 0;
+#X connect 39 0 43 3;
+#X connect 40 0 43 4;
+#X connect 41 0 39 0;
+#X connect 42 0 40 0;
+#X connect 43 0 33 0;
+#X connect 43 1 36 0;
+#X connect 44 0 56 1;
+#X connect 45 0 56 2;
+#X connect 47 0 56 0;
+#X connect 50 0 44 0;
+#X connect 51 0 73 0;
+#X connect 52 0 56 3;
+#X connect 53 0 56 4;
+#X connect 54 0 52 0;
+#X connect 55 0 53 0;
+#X connect 56 0 46 0;
+#X connect 56 1 49 0;
+#X connect 57 0 69 1;
+#X connect 58 0 69 2;
+#X connect 60 0 69 0;
+#X connect 63 0 57 0;
+#X connect 64 0 69 3;
+#X connect 65 0 69 4;
+#X connect 66 0 64 0;
+#X connect 67 0 65 0;
+#X connect 68 0 2 0;
+#X connect 69 0 59 0;
+#X connect 69 1 62 0;
+#X connect 70 0 30 5;
+#X connect 71 0 43 5;
+#X connect 72 0 17 5;
+#X connect 73 0 56 5;
+#X connect 74 0 75 0;
